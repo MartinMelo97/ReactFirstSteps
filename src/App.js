@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Person from './components/person'
+import persons from './seeds/person.json'
+import './App.scss'
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  constructor(props) {
+    super(props)
+    this.state = {
+      persons: []
+    }
+  }
+
+  componentDidMount = () => {
+    this.setState({
+      persons: persons.persons
+    })
+  }
+
+  render() {
+    return (
+      <div className="app-container">
+        <h1>Test de React</h1>
+        {this.state.persons.map((person, index) => (
+          <Person
+            person = {person}
+            active = {true}
+          />
+        ))}
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App

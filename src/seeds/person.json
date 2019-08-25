@@ -1,0 +1,22 @@
+{
+    "persons": [
+        {
+            "name": "Martin",
+            "lastName": "Melo",
+            "age": 22,
+            "email": "martinmelo@actosoft.com.mx"
+        },
+        {
+            "name": "Yagel",
+            "lastName": "Salazar",
+            "age": 21,
+            "email": "yagel@actosoft.com.mx"
+        },
+        {
+            "name": "Diego",
+            "lastName": "Salas",
+            "age": 21,
+            "email": "salas@actosoft.com.mx"
+        }
+    ]
+}
